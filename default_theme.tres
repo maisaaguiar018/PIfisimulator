@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bl6de7k5uxvah"]
+
+[ext_resource type="Script" uid="uid://dav5y7li43n6m" path="res://src/physics_object.gd" id="1_jlpvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwhlv"]
+size = Vector2(8, 8)
+
+[node name="PhysicsObject" type="CharacterBody2D" unique_id=1397862429]
+z_as_relative = false
+script = ExtResource("1_jlpvs")
+metadata/_custom_type_script = "uid://dav5y7li43n6m"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=139451327]
+ignore_rotation = false
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=62813983]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_iwhlv")
+
+[node name="color" type="ColorRect" parent="collision" unique_id=1338398972]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+mouse_force_pass_scroll_events = false
+color = Color(1, 0, 0, 1)
