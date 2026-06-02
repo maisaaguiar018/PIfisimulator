@@ -1,36 +1,31 @@
-[remap]
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
-importer="font_data_dynamic"
-type="FontFile"
-uid="uid://cuauuj8a6q48x"
-path="res://.godot/imported/LibreBaskerville-VariableFont_wght.ttf-f013ea8bdc94ab31d8aca17245b2ca04.fontdata"
+config_version=5
 
-[deps]
+[application]
 
-source_file="res://src/fonts/LibreBaskerville-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/LibreBaskerville-VariableFont_wght.ttf-f013ea8bdc94ab31d8aca17245b2ca04.fontdata"]
+config/name="Fisimulator"
+run/main_scene="uid://bnudkbgeonqhr"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
 
-[params]
+[display]
 
-Rendering=null
-antialiasing=1
-generate_mipmaps=false
-disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
-msdf_pixel_range=8
-msdf_size=48
-allow_system_fallback=true
-force_autohinter=false
-modulate_color_glyphs=false
-hinting=1
-subpixel_positioning=4
-keep_rounding_remainders=true
-oversampling=0.0
-Fallbacks=null
-fallbacks=[]
-Compress=null
-compress=true
-preload=[]
-language_support={}
-script_support={}
-opentype_features={}
+window/stretch/mode="canvas_items"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
