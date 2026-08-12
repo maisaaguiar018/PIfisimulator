@@ -1,6 +1,0 @@
-[gd_resource type="Theme" format=3 uid="uid://cn62sm70s52e3"]
-
-[ext_resource type="FontFile" uid="uid://ci0nlgfai11t6" path="res://src/fonts/static/LibreBaskerville-Regular.ttf" id="1_24efn"]
-
-[resource]
-default_font = ExtResource("1_24efn")
