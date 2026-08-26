@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqaoi2kfqgf2h"]
+
+[ext_resource type="Script" uid="uid://d0nkekxlcgyiw" path="res://scenes/mru/introdução_mru.gd" id="1_codil"]
+[ext_resource type="Texture2D" uid="uid://ceoa6m2vusme7" path="res://scenes/mru/imagens/intoMru.png" id="2_fv21n"]
+
+[node name="IntroduçãoMru" type="Node2D" unique_id=997367676]
+script = ExtResource("1_codil")
+
+[node name="IntoMRU" type="Sprite2D" parent="." unique_id=1642603849]
+position = Vector2(577, 323.50003)
+scale = Vector2(0.6809016, 0.68703103)
+texture = ExtResource("2_fv21n")
+
+[node name="SimuMRU" type="Button" parent="." unique_id=1896703044]
+offset_left = 810.0
+offset_top = 553.0
+offset_right = 984.0
+offset_bottom = 594.0
+text = "Ir para simulação:"

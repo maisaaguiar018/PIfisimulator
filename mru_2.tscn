@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bms2fg7j1i6i6"]
+
+[ext_resource type="Script" uid="uid://b7dpq4nhhjtxl" path="res://scenes/mru/scripts/mru_2.gd" id="1_y7nmb"]
+[ext_resource type="Script" uid="uid://dplxah560s0f5" path="res://scenes/mru/scripts/parallax_background.gd" id="2_1663r"]
+[ext_resource type="Texture2D" uid="uid://v6ki71fhetja" path="res://scenes/mru/imagens/carrinho.png" id="2_qybcy"]
+[ext_resource type="Texture2D" uid="uid://dxcywrpmerf61" path="res://scenes/mru/imagens/fundomru2.jpeg" id="4_wtc1t"]
+[ext_resource type="Script" uid="uid://mlb0qkxjjc6p" path="res://scenes/mru/scripts/iniciar.gd" id="5_qybcy"]
+[ext_resource type="Script" uid="uid://c8ngt5hkyiqb4" path="res://scenes/mru/scripts/pausar.gd" id="6_t6i78"]
+[ext_resource type="Script" uid="uid://co4ls3hnml7tg" path="res://scenes/mru/voltar_into.gd" id="7_1k51x"]
+[ext_resource type="Script" uid="uid://dr1p1vfbpyqyy" path="res://scenes/mru/scripts/parar.gd" id="7_f88xs"]
+[ext_resource type="Script" uid="uid://dqteaosv7sr4o" path="res://scenes/mru/voltar_menu.gd" id="8_wtc1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6i78"]
+size = Vector2(213.375, 85.5)
+
+[node name="MRU_2" type="Node2D" unique_id=1092552477]
+script = ExtResource("1_y7nmb")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=106876908]
+position = Vector2(-640, 436)
+
+[node name="corpocarro" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1591332301]
+position = Vector2(768, 84)
+shape = SubResource("RectangleShape2D_t6i78")
+
+[node name="carrinho" type="Sprite2D" parent="CharacterBody2D/corpocarro" unique_id=405850097]
+position = Vector2(0.3125, 0.250004)
+scale = Vector2(0.169434, 0.161865)
+texture = ExtResource("2_qybcy")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=509732344]
+script = ExtResource("2_1663r")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1957457511]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="fundomru2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=184809183]
+position = Vector2(982, 446.00003)
+scale = Vector2(1.2325, 0.5725)
+texture = ExtResource("4_wtc1t")
+
+[node name="SpinBox" type="SpinBox" parent="." unique_id=1242363017]
+offset_left = 408.0
+offset_top = 3.0
+offset_right = 495.0
+offset_bottom = 50.0
+max_value = 100000.0
+
+[node name="Tempo" type="TextEdit" parent="." unique_id=317159651]
+offset_left = 953.0
+offset_top = 92.0
+offset_right = 1113.0
+offset_bottom = 125.0
+editable = false
+
+[node name="Distancia" type="TextEdit" parent="." unique_id=2111292466]
+offset_left = 952.0
+offset_top = 51.0
+offset_right = 1112.0
+offset_bottom = 84.0
+editable = false
+
+[node name="Iniciar" type="Button" parent="." unique_id=1778278859]
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 122.0
+offset_bottom = 53.0
+text = "INICIAR
+"
+script = ExtResource("5_qybcy")
+
+[node name="Pausar" type="Button" parent="." unique_id=561282727]
+offset_left = 24.0
+offset_top = 58.0
+offset_right = 124.0
+offset_bottom = 101.0
+text = "PAUSAR"
+script = ExtResource("6_t6i78")
+
+[node name="Recomeçar" type="Button" parent="." unique_id=1996089585]
+offset_left = 24.0
+offset_top = 105.0
+offset_right = 126.0
+offset_bottom = 150.0
+text = "REINICIAR"
+script = ExtResource("7_f88xs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=463980828]
+modulate = Color(0, 0, 0, 1)
+offset_left = 174.0
+offset_top = 8.0
+offset_right = 393.0
+offset_bottom = 57.0
+text = "INFORME A VELOCIDADE DO CARRO:"
+
+[node name="VoltarInto" type="Button" parent="." unique_id=478975039]
+offset_left = 924.0
+offset_top = 568.0
+offset_right = 1150.0
+offset_bottom = 599.0
+text = "Retornar para o conteúdo:"
+script = ExtResource("7_1k51x")
+
+[node name="VoltarMenu" type="Button" parent="." unique_id=1094082014]
+offset_left = 924.0
+offset_top = 608.0
+offset_right = 1150.0
+offset_bottom = 639.0
+text = "Retornar ao menu principal:"
+script = ExtResource("8_wtc1t")

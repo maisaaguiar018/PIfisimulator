@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dxij1pnh7ea0r"]
+
+[ext_resource type="Texture2D" uid="uid://b3nrkqgjr6dwa" path="res://scenes/mru/imagens/work.png" id="1_aupag"]
+[ext_resource type="Script" uid="uid://b7gyr31gshtck" path="res://scenes/queda_livre/queda_livre.gd" id="1_vjuxi"]
+
+[node name="queda_livre" type="Node2D" unique_id=709726467]
+script = ExtResource("1_vjuxi")
+
+[node name="Work" type="Sprite2D" parent="." unique_id=1156200579]
+position = Vector2(578.75, 320.50003)
+scale = Vector2(1.8917356, 1.8797654)
+texture = ExtResource("1_aupag")
+
+[node name="VoltarMenu" type="Button" parent="." unique_id=2092823647]
+offset_left = 810.0
+offset_top = 553.0
+offset_right = 984.0
+offset_bottom = 594.0
+text = "Retornar ao menu principal
+"

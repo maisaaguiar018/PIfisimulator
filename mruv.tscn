@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://x6w2ucmfy7x1"]
+
+[ext_resource type="Script" uid="uid://bicx11dt6di5t" path="res://scenes/mruv/mruv.gd" id="1_rxxr1"]
+[ext_resource type="Script" uid="uid://c6db3jvtrbfxu" path="res://scenes/mruv/parallaxMRUV.gd" id="1_vn5m7"]
+[ext_resource type="Texture2D" uid="uid://buq0seacpolw5" path="res://scenes/mru/imagens/Fundomruv.jpeg" id="2_bjdil"]
+[ext_resource type="Texture2D" uid="uid://dhtirs3pj6321" path="res://scenes/mru/imagens/file_00000000d29c820e879621a6d6c1b9aa.png" id="2_vn5m7"]
+[ext_resource type="Script" uid="uid://bcitatgb6blh4" path="res://scenes/mruv/inicio.gd" id="4_4hgx6"]
+[ext_resource type="Script" uid="uid://pq2ok3lg6eit" path="res://scenes/mruv/pausa.gd" id="5_rxxr1"]
+[ext_resource type="Script" uid="uid://c6y8wrng6fioi" path="res://scenes/mruv/reiniciar.gd" id="6_27iym"]
+[ext_resource type="Script" uid="uid://co4ls3hnml7tg" path="res://scenes/mru/voltar_into.gd" id="8_vxvtb"]
+[ext_resource type="Script" uid="uid://dqteaosv7sr4o" path="res://scenes/mru/voltar_menu.gd" id="9_d5ps1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cais"]
+size = Vector2(143, 84.75)
+
+[node name="mruv" type="Node2D" unique_id=1180101589]
+script = ExtResource("1_rxxr1")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=568083415]
+physics_interpolation_mode = 1
+script = ExtResource("1_vn5m7")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1218925532]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="WhatsAppImage2026-08-11At08_16_42" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=844747649]
+position = Vector2(598.5, 412.50006)
+scale = Vector2(0.7897135, 0.80371076)
+texture = ExtResource("2_bjdil")
+
+[node name="viao" type="CharacterBody2D" parent="." unique_id=2109374273]
+
+[node name="corpoviao" type="CollisionShape2D" parent="viao" unique_id=1790855461]
+position = Vector2(240.5, 234.625)
+shape = SubResource("RectangleShape2D_2cais")
+
+[node name="viaoimg" type="Sprite2D" parent="viao/corpoviao" unique_id=1570021605]
+position = Vector2(0.5, 5.375)
+scale = Vector2(0.147136, 0.136719)
+texture = ExtResource("2_vn5m7")
+
+[node name="vel_inicial" type="SpinBox" parent="." unique_id=1576934786]
+offset_left = 568.0
+offset_top = 50.0
+offset_right = 654.563
+offset_bottom = 81.0
+max_value = 10000000000.0
+
+[node name="Aceleration" type="SpinBox" parent="." unique_id=1956283604]
+offset_left = 567.0
+offset_top = 9.0
+offset_right = 654.0
+offset_bottom = 40.0
+max_value = 100000000000000.0
+
+[node name="Inicio" type="Button" parent="." unique_id=2073969381]
+offset_left = 59.0
+offset_top = 3.0
+offset_right = 144.0
+offset_bottom = 34.0
+text = "Iniciar
+"
+script = ExtResource("4_4hgx6")
+
+[node name="Pausa" type="Button" parent="." unique_id=221330066]
+offset_left = 59.0
+offset_top = 41.0
+offset_right = 145.0
+offset_bottom = 72.0
+text = "Pausar"
+script = ExtResource("5_rxxr1")
+
+[node name="Reiniciar" type="Button" parent="." unique_id=373372053]
+offset_left = 59.0
+offset_top = 77.0
+offset_right = 147.0
+offset_bottom = 108.0
+text = "Reiniciar"
+script = ExtResource("6_27iym")
+
+[node name="Distance" type="TextEdit" parent="." unique_id=1435016744]
+offset_left = 958.0
+offset_top = 25.0
+offset_right = 1118.0
+offset_bottom = 58.0
+editable = false
+
+[node name="velocidade" type="TextEdit" parent="." unique_id=370989581]
+offset_left = 958.0
+offset_top = 120.0
+offset_right = 1122.0
+offset_bottom = 153.0
+editable = false
+
+[node name="Time" type="TextEdit" parent="." unique_id=1799035589]
+offset_left = 958.0
+offset_top = 72.0
+offset_right = 1118.0
+offset_bottom = 105.0
+editable = false
+
+[node name="instrução" type="RichTextLabel" parent="." unique_id=458235094]
+offset_left = 181.0
+offset_top = 9.0
+offset_right = 395.0
+offset_bottom = 74.0
+text = "informe a aceleração e a velocidade inicial do avião:"
+
+[node name="aceleração" type="RichTextLabel" parent="." unique_id=1365914605]
+offset_left = 463.0
+offset_top = 12.0
+offset_right = 558.0
+offset_bottom = 38.0
+text = "Aceleração"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=887778684]
+offset_left = 463.0
+offset_top = 50.0
+offset_right = 584.0
+offset_bottom = 95.0
+text = "Velocidade"
+
+[node name="VoltarInto2" type="Button" parent="." unique_id=417814905]
+offset_left = 716.0
+offset_top = 8.0
+offset_right = 942.0
+offset_bottom = 39.0
+text = "Retornar para o conteúdo.
+"
+script = ExtResource("8_vxvtb")
+
+[node name="VoltarMenu2" type="Button" parent="." unique_id=1916289502]
+offset_left = 716.0
+offset_top = 41.0
+offset_right = 942.0
+offset_bottom = 72.0
+text = "Retornar ao menu principal."
+script = ExtResource("9_d5ps1")

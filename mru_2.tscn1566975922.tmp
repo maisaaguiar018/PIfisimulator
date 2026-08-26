@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://bms2fg7j1i6i6"]
+
+[ext_resource type="Script" uid="uid://b7dpq4nhhjtxl" path="res://src/mru/mru_2.gd" id="1_y7nmb"]
+[ext_resource type="Script" uid="uid://dplxah560s0f5" path="res://src/mru/parallax_background.gd" id="2_1663r"]
+[ext_resource type="Texture2D" uid="uid://v6ki71fhetja" path="res://src/mru/ChatGPT Image 10 de ago. de 2026, 17_46_07.png" id="2_qybcy"]
+[ext_resource type="Texture2D" uid="uid://dyf0fnffx26sx" path="res://src/mru/fundomru.PNG" id="4_qybcy"]
+[ext_resource type="Script" uid="uid://mlb0qkxjjc6p" path="res://src/mru/iniciar.gd" id="5_qybcy"]
+[ext_resource type="Script" uid="uid://uruthpc115eu" path="res://src/mru/spin_box.gd" id="5_t6i78"]
+[ext_resource type="Script" uid="uid://c8ngt5hkyiqb4" path="res://src/mru/pausar.gd" id="6_t6i78"]
+[ext_resource type="Script" uid="uid://dr1p1vfbpyqyy" path="res://src/mru/parar.gd" id="7_f88xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6i78"]
+size = Vector2(213.375, 85.5)
+
+[node name="MRU_2" type="Node2D"]
+script = ExtResource("1_y7nmb")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-640, 436)
+
+[node name="corpocarro" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(768, 84)
+shape = SubResource("RectangleShape2D_t6i78")
+
+[node name="ChatGptImage10DeAgo_De2026,174607" type="Sprite2D" parent="CharacterBody2D/corpocarro"]
+position = Vector2(0.3125, 0.250004)
+scale = Vector2(0.169434, 0.161865)
+texture = ExtResource("2_qybcy")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_1663r")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Fundomru2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(736, 456)
+scale = Vector2(0.718506, 0.442139)
+texture = ExtResource("4_qybcy")
+
+[node name="SpinBox" type="SpinBox" parent="."]
+offset_left = 408.0
+offset_top = 3.0
+offset_right = 495.0
+offset_bottom = 50.0
+max_value = 100000.0
+script = ExtResource("5_t6i78")
+
+[node name="Tempo" type="TextEdit" parent="."]
+offset_left = 953.0
+offset_top = 92.0
+offset_right = 1113.0
+offset_bottom = 125.0
+editable = false
+
+[node name="Distancia" type="TextEdit" parent="."]
+offset_left = 952.0
+offset_top = 51.0
+offset_right = 1112.0
+offset_bottom = 84.0
+editable = false
+
+[node name="Iniciar" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 122.0
+offset_bottom = 53.0
+text = "INICIAR
+"
+script = ExtResource("5_qybcy")
+
+[node name="Pausar" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 58.0
+offset_right = 124.0
+offset_bottom = 101.0
+text = "PAUSAR"
+script = ExtResource("6_t6i78")
+
+[node name="Recomeçar" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 105.0
+offset_right = 126.0
+offset_bottom = 150.0
+text = "REINICIAR"
+script = ExtResource("7_f88xs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 174.0
+offset_top = 8.0
+offset_right = 393.0
+offset_bottom = 57.0
+text = "INFORME A VELOCIDADE DO CARRO:"

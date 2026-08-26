@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dn52udjf6y3vr"]
+
+[ext_resource type="Script" uid="uid://nayshnnq8br" path="res://src/pages/menu.gd" id="1_g3eks"]
+[ext_resource type="Texture2D" uid="uid://bb4n2p6oemrtr" path="res://src/images/atom_symbol.png" id="2_v86rl"]
+[ext_resource type="Theme" uid="uid://cn62sm70s52e3" path="res://src/themes/button_theme.tres" id="3_13sgg"]
+[ext_resource type="Texture2D" uid="uid://crtargjyiavkr" path="res://src/images/ql_icon.png" id="4_i6lef"]
+[ext_resource type="Script" uid="uid://7oq5r7jt1ald" path="res://scenes/button_ql.gd" id="5_13sgg"]
+[ext_resource type="Texture2D" uid="uid://pav0bu5gr8by" path="res://src/images/mru_icon.png" id="5_70i5f"]
+[ext_resource type="Texture2D" uid="uid://cn5rncjh1wjsv" path="res://src/images/mruv_icon.png" id="6_mj5lg"]
+[ext_resource type="Script" uid="uid://dxywgmqenbuuf" path="res://scenes/button_mruv.gd" id="7_v86rl"]
+
+[node name="menu" type="Control" unique_id=1797611296]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_g3eks")
+
+[node name="background" type="ColorRect" parent="." unique_id=1878886383]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.215686, 0.180392, 0.152941, 1)
+
+[node name="atom" type="Sprite2D" parent="background" unique_id=1672514977]
+position = Vector2(80, 72)
+scale = Vector2(0.135729, 0.135729)
+texture = ExtResource("2_v86rl")
+
+[node name="button_ql" type="Button" parent="." unique_id=85339508]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 264.0
+offset_right = 1000.0
+offset_bottom = 399.0
+theme = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 18
+text = "Queda Livre"
+icon = ExtResource("4_i6lef")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 2
+script = ExtResource("5_13sgg")
+
+[node name="button_mru" type="Button" parent="." unique_id=481033387]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 285.0
+offset_right = 276.0
+offset_bottom = 445.0
+theme = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 17
+text = "MRU"
+icon = ExtResource("5_70i5f")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="button_mruv" type="Button" parent="." unique_id=725967900]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 264.0
+offset_right = 640.0
+offset_bottom = 424.0
+theme = ExtResource("3_13sgg")
+text = "MRUV"
+icon = ExtResource("6_mj5lg")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 2
+script = ExtResource("7_v86rl")

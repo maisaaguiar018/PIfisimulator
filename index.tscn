@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bnudkbgeonqhr"]
+
+[ext_resource type="Texture2D" uid="uid://iyyioti6e0nj" path="res://src/images/main_background.png" id="1_8s3bs"]
+[ext_resource type="Texture2D" uid="uid://bb4n2p6oemrtr" path="res://src/images/atom_symbol.png" id="2_khbhx"]
+[ext_resource type="Theme" uid="uid://w53qfc81oo0o" path="res://src/themes/default_theme.tres" id="3_cjd57"]
+[ext_resource type="FontFile" uid="uid://b2hb8qwwebibl" path="res://src/fonts/GlacialIndifference-Regular.otf" id="4_eao86"]
+[ext_resource type="Script" uid="uid://dgty6los45xdh" path="res://scenes/mru/scripts/index.gd" id="5_khbhx"]
+[ext_resource type="Texture2D" uid="uid://dk0axk5ptr06s" path="res://scenes/mru/imagens/fisimulatormenu.png" id="5_vc6rt"]
+
+[sub_resource type="GDScript" id="GDScript_cjd57"]
+
+[sub_resource type="Theme" id="Theme_bj378"]
+default_font = ExtResource("4_eao86")
+default_font_size = 0
+
+[node name="index" type="Control" unique_id=315101719]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_cjd57")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1061459290]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+use_top_left = true
+
+[node name="background" type="Sprite2D" parent="CenterContainer" unique_id=305410875]
+position = Vector2(587, 322)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_8s3bs")
+
+[node name="atom" type="Sprite2D" parent="CenterContainer/background" unique_id=1825191199]
+position = Vector2(-746.667, -286.667)
+scale = Vector2(0.445775, 0.392548)
+texture = ExtResource("2_khbhx")
+
+[node name="main_label" type="RichTextLabel" parent="CenterContainer/background/atom" unique_id=1692085132]
+offset_left = 297.235
+offset_top = -203.465
+offset_right = 1804.0
+offset_bottom = 101.826
+theme = ExtResource("3_cjd57")
+theme_override_colors/default_color = Color(0.721569, 0.545098, 0.423529, 1)
+theme_override_font_sizes/normal_font_size = 263
+text = "Fisimulator."
+scroll_active = false
+
+[node name="sub_label" type="RichTextLabel" parent="CenterContainer/background/atom" unique_id=1349417434]
+offset_left = 476.698
+offset_top = 102.23
+offset_right = 1535.2
+offset_bottom = 237.915
+theme = ExtResource("3_cjd57")
+theme_override_colors/default_color = Color(0.721569, 0.545098, 0.423529, 1)
+theme_override_font_sizes/normal_font_size = 81
+bbcode_enabled = true
+text = "\"toda ação tem uma reação.\""
+scroll_active = false
+autowrap_mode = 0
+tab_size = 1
+shortcut_keys_enabled = false
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/background" unique_id=1711057584]
+offset_left = -875.0
+offset_top = 123.0
+offset_right = -275.0
+offset_bottom = 447.0
+
+[node name="meubutao" type="Button" parent="CenterContainer/background/MarginContainer" unique_id=925809966]
+layout_mode = 2
+theme = SubResource("Theme_bj378")
+theme_override_colors/font_color = Color(0.721569, 0.545098, 0.423529, 1)
+theme_override_colors/font_focus_color = Color(0.94902, 0.94902, 0.94902, 0)
+theme_override_colors/font_hover_color = Color(0.552941, 0.529412, 0.447059, 1)
+theme_override_font_sizes/font_size = 25
+text = "Ir para simulações "
+flat = true
+alignment = 0
+script = ExtResource("5_khbhx")
+
+[node name="Fisimulatormenu" type="Sprite2D" parent="." unique_id=1182766377]
+position = Vector2(587, 323)
+scale = Vector2(1.92219, 1.8915)
+texture = ExtResource("5_vc6rt")

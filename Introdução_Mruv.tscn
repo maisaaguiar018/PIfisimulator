@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://do7jga4u0fnn1"]
+
+[ext_resource type="Script" uid="uid://beghaknno06py" path="res://scenes/mruv/introdução_mruv.gd" id="1_2xb83"]
+[ext_resource type="Texture2D" uid="uid://c7770y6nbw1ij" path="res://scenes/mru/imagens/intomruv.jpeg" id="2_bv5rx"]
+
+[node name="IntroduçãoMruv" type="Node2D" unique_id=1239859484]
+script = ExtResource("1_2xb83")
+
+[node name="intomruv" type="Sprite2D" parent="." unique_id=1743792774]
+position = Vector2(578, 324.99997)
+scale = Vector2(0.71669793, 0.7256439)
+texture = ExtResource("2_bv5rx")
+
+[node name="SimuMRUV" type="Button" parent="." unique_id=396268344]
+offset_left = 810.0
+offset_top = 553.0
+offset_right = 984.0
+offset_bottom = 594.0
+text = "Ir para simulação:"
